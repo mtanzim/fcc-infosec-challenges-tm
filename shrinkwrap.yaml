@@ -1,4 +1,6 @@
 dependencies:
+  bcrypt: 3.0.0
+  bcryptjs: 2.4.3
   express: 4.16.3
   helmet: 3.12.1
 packages:
@@ -15,6 +17,21 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
+  /bcrypt/3.0.0:
+    bundledDependencies:
+      - node-pre-gyp
+    dependencies:
+      nan: 2.10.0
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-gjicxsD4e5U3nH0EqiEb5y+fKpsZ7F52wcnmNfu45nxnolWVAYh7NgbdfilY+5x1v6cLspxmzz4hf+ju2pFxhA==
+  /bcryptjs/2.4.3:
+    dev: false
+    resolution:
+      integrity: sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   /body-parser/1.18.2:
     dependencies:
       bytes: 3.0.0
@@ -319,6 +336,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+  /nan/2.10.0:
+    dev: false
+    resolution:
+      integrity: sha512-bAdJv7fBLhWC+/Bls0Oza+mvTaNQtP+1RyhhhvD95pgUJz6XM5IzgmxOkItJ9tkoCiplvAnXI1tNmmUD/eScyA==
   /negotiator/0.6.1:
     dev: false
     engines:
@@ -477,5 +498,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
+  bcrypt: ^3.0.0
+  bcryptjs: ^2.4.3
   express: ^4.14.0
   helmet: ^3.12.1

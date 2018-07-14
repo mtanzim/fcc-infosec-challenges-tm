@@ -6,6 +6,8 @@
 var express = require('express'); // Do Not Edit
 var app = express();              // Do Not Edit
 var helmet = require('helmet');
+var bcrypt  = require('bcrypt');
+const saltRounds = 10;
 
 // ----
 
@@ -187,7 +189,12 @@ app.use(helmet.noCache());
 // in the `"'self'"` keyword, the single quotes are part of the keyword itself, 
 // so it needs to be enclosed in **double quotes** to be working.
 
-app.use(helmet.contentSecurityPolicy(["'self'"]));
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc : ["'self'", 'trusted-cdn.com']
+  }
+}))
 
 
 /** TIP: */ 

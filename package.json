@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "helmet": "^3.12.1"
+    "helmet": "^3.12.1",
+    "bcryptjs": "^2.4.3",
+    "bcrypt": "^3.0.0"
   },
   "engines": {
     "node": "4.4.5"
