@@ -74,6 +74,7 @@ app.use(helmet.hidePoweredBy());
 // It still has limited support.
 
 // Use `helmet.xssFilter()`
+app.use(helmet.xssFilter());
 
 
 
@@ -87,6 +88,7 @@ app.use(helmet.hidePoweredBy());
 // instructing the browser to not bypass the provided `Content-Type`.
 
 // Use `helmet.noSniff()`
+app.use(helmet.noSniff());
 
 
 
@@ -100,6 +102,7 @@ app.use(helmet.hidePoweredBy());
 // to prevent IE users from executing downloads in the *trusted* site's context.
 
 // Use `helmet.ieNoOpen()`
+app.use(helmet.ieNoOpen());
 
 
 
@@ -120,6 +123,7 @@ app.use(helmet.hidePoweredBy());
 // policy we will intercept and restore the header, after inspecting it for testing.
 
 var ninetyDaysInMilliseconds = 90*24*60*60*1000;
+app.use(helmet.hsts({maxAge: ninetyDaysInMilliseconds}));
 
 
 //**Note**:
@@ -138,6 +142,7 @@ var ninetyDaysInMilliseconds = 90*24*60*60*1000;
 // DNS prefetching, at the cost of a performance penalty.
 
 // Use `helmet.dnsPrefetchControl()`
+app.use(helmet.dnsPrefetchControl());
 
 
 
@@ -150,6 +155,7 @@ var ninetyDaysInMilliseconds = 90*24*60*60*1000;
 // use this option only when there is a real need.
 
 // Use helmet.noCache()
+app.use(helmet.noCache());
 
 
 
@@ -181,6 +187,7 @@ var ninetyDaysInMilliseconds = 90*24*60*60*1000;
 // in the `"'self'"` keyword, the single quotes are part of the keyword itself, 
 // so it needs to be enclosed in **double quotes** to be working.
 
+app.use(helmet.contentSecurityPolicy(["'self'"]));
 
 
 /** TIP: */ 
