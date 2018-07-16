@@ -1,6 +1,5 @@
 dependencies:
   bcrypt: 3.0.0
-  bcryptjs: 2.4.3
   express: 4.16.3
   helmet: 3.12.1
 packages:
@@ -28,10 +27,6 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-gjicxsD4e5U3nH0EqiEb5y+fKpsZ7F52wcnmNfu45nxnolWVAYh7NgbdfilY+5x1v6cLspxmzz4hf+ju2pFxhA==
-  /bcryptjs/2.4.3:
-    dev: false
-    resolution:
-      integrity: sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   /body-parser/1.18.2:
     dependencies:
       bytes: 3.0.0
@@ -499,6 +494,5 @@ shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
   bcrypt: ^3.0.0
-  bcryptjs: ^2.4.3
   express: ^4.14.0
   helmet: ^3.12.1
